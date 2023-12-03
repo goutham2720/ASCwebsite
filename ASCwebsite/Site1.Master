@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ASCwebsite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="fontawesome/js/all.js"></script>
+    <style>
+        .content1body {
+        }
+
+        #menuButton {
+            border: none;
+            background: none;
+            justify-content: center;
+        }
+
+        #searchBar {
+            padding-left: 100px;
+        }
+
+        .productCard:hover {
+            border-style: solid;
+            border-color: #effa84;
+            transform: scale(1.02);
+        }
+        .loginPageButtons{
+            width:500px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+
+        <div class="shadow ">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-primary" href="homePage.aspx" >Logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav " id="searchBar">
+
+
+
+                            <li class="nav-item input-group ">
+                                <asp:TextBox class="form-control    " ID="TextBox1" runat="server" Style="width: 500px"></asp:TextBox>
+
+                                <asp:Button ID="Button4" runat="server" Text="Search" class="btn btn-primary" />
+                            </li>
+                        </ul>
+
+
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="loginPage.aspx">Login/Signup</a>
+                            </li>
+                            <li class="nav-item  ">
+                                
+                                <a class="nav-link" href="#">Cart</a>
+                            </li>
+                            <li class="nav-item">
+
+                                <div >
+                                    <button type="button menuButton " class="btn"  data-bs-toggle="dropdown" aria-expanded="false">
+                                        Menu
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <button class="dropdown-item" type="button">Action</button></li>
+                                        <li>
+                                            <button class="dropdown-item" type="button">Another action</button></li>
+                                        <li>
+                                            <button class="dropdown-item" type="button">Something else here</button></li>
+                                    </ul>
+                                </div>
+
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+    </form>
+    <footer class=" container-fluid py-3 bg-dark px-3 text-secondary">
+        <div class="row">
+
+            <div class="col sm-4">
+                <h3>About</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+            </div>
+            <div class="col sm-4">
+                <h3>help</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="col sm-4">
+                <h3>Connect with us</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
