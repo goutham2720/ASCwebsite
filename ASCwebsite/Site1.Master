@@ -15,14 +15,9 @@
         .content1body {
         }
 
-        #menuButton {
-            border: none;
-            background: none;
-            justify-content: center;
-        }
 
-        #searchBar {
-            padding-left: 100px;
+        .navbar-brand {
+            margin-right: 100px;
         }
 
         .productCard:hover {
@@ -30,8 +25,25 @@
             border-color: #effa84;
             transform: scale(1.02);
         }
-        .loginPageButtons{
-            width:500px;
+
+        .loginPageButtons {
+            width: 20rem;
+        }
+
+        .nav-link {
+            padding-left: 0px;
+            color: #808080;
+        }
+
+            .nav-link:hover {
+                color: black;
+            }
+
+        .loginTextField {
+        }
+
+        .card-body {
+            width: auto;
         }
     </style>
 </head>
@@ -43,19 +55,19 @@
         <div class="shadow ">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-primary" href="homePage.aspx" >Logo</a>
+                    <a class="navbar-brand text-primary" href="homePage.aspx">Logo</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav " id="searchBar">
+                        <ul class="navbar-nav row " id="searchBar">
 
 
 
-                            <li class="nav-item input-group ">
-                                <asp:TextBox class="form-control    " ID="TextBox1" runat="server" Style="width: 500px"></asp:TextBox>
+                            <li class="nav-item input-group col-lg-1 my-2 ">
+                                <asp:TextBox class="form-control    " ID="searchText" runat="server" Style="width: 20rem"></asp:TextBox>
 
-                                <asp:Button ID="Button4" runat="server" Text="Search" class="btn btn-primary" />
+                                <asp:Button ID="searchButton" runat="server" Text="Search" class="btn btn-primary" OnClick="searchButton_Click" />
                             </li>
                         </ul>
 
@@ -63,18 +75,21 @@
 
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="loginPage.aspx">Login/Signup</a>
+                                <asp:Button class="nav-link " ID="LoginSignupButton" runat="server" Text="Login/Signup" OnClick="LoginSignupButton_Click" />
+                            </li>
+                            <li class="nav-item">
+                               <asp:Button class="nav-link " ID="UserNameButton" runat="server" Text="Button" />
                             </li>
                             <li class="nav-item  ">
-                                
-                                <a class="nav-link" href="#">Cart</a>
+
+                                <asp:Button class="nav-link " ID="CartButton" runat="server" Text="Cart" OnClick="CartButton_Click" />
                             </li>
                             <li class="nav-item">
 
-                                <div >
-                                    <button type="button menuButton " class="btn"  data-bs-toggle="dropdown" aria-expanded="false">
-                                        Menu
-                                    </button>
+                                <div>
+
+                                    <a class="nav-link menubutton" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Menu
+                                    </a>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li>
                                             <button class="dropdown-item" type="button">Action</button></li>
@@ -82,6 +97,9 @@
                                             <button class="dropdown-item" type="button">Another action</button></li>
                                         <li>
                                             <button class="dropdown-item" type="button">Something else here</button></li>
+                                        <li>
+                                            <asp:Button class="dropdown-item" ID="LogoutButton" runat="server" Text="Logout" OnClick="LogoutButton_Click" />
+                                        </li>
                                     </ul>
                                 </div>
 

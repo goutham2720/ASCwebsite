@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -45,16 +46,22 @@ namespace ASCwebsite
                 SqlCommand cmd = new SqlCommand(qry, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
 
-                if (sdr.Read())
+                if (sdr.HasRows)
                 {
-                    Response.Redirect("HomePage.aspx");
+                    while (sdr.Read())
+                    {
+                        Session["LogInUserId"] = sdr.GetValue(0).ToString();
+                        Session["LogInCustomerName"] = sdr.GetValue(1).ToString();
 
-                    Response.Write("successfull");
-                    con.Close();
+                    }
+
+                    Response.Redirect("homePage.aspx");
+
 
                 }
                 else
                 {
+                    LoginErorLabel.Text = "Error: User Email or Password is wrong";
                     Response.Write("failed ");
                 }
 

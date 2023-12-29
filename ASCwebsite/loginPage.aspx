@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container my-3" style="height:100vh;">
+    <div class="container my-3" style="height: 100vh;">
         <div class="row">
             <div class="col-md-6  mx-auto">
 
@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    
+
                                     <img src="images/profile-user.png" width="150" />
                                 </center>
                             </div>
@@ -35,30 +35,41 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col text-danger">
+                                 <center>
+                                <asp:Label ID="LoginErorLabel" runat="server" Text=""></asp:Label>
+                                 </center>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col">
 
                                 <label id="Member ID">User Email</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextEmail" runat="server" placeholder="email" ></asp:TextBox>     
+                                    <asp:TextBox CssClass="form-control loginTextField" ID="TextEmail" runat="server" placeholder="email"></asp:TextBox>
                                 </div>
 
                                 <label id="Password">Password</label>
                                 <div class=" form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextPassword"
-                                        runat="server" placeholder="password" ></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control loginTextField" ID="TextPassword"
+                                        runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
 
                                 </div>
                                 <br />
 
                                 <center>
 
-                                    <div class="form-group ">
+                                    <div class="d-grid gap-2">
 
-                                        <asp:Button class="btn btn-success my-2 loginPageButtons " ID="loginButton" runat="server" Text="Login" OnClick="loginButton_Click" />
-                                        <br />
-                                        <a class="btn btn-info text-white loginPageButtons"  href="signupPage.aspx">Sign up</a>
+                                        <asp:Button class="btn btn-success py-2 " ID="loginButton" runat="server" Text="Login" OnClick="loginButton_Click" />
+
+
+
+
+                                        <a class="btn btn-primary btn-block text-white py-2" href="signupPage.aspx">Sign up</a>
 
                                     </div>
+
 
 
 
@@ -76,7 +87,7 @@
 
                 </div>
                 <br />
-                
+
                 <a class="py-3" href="homePage.aspx"><< Back to homepage </a>
                 <br>
                 <br>

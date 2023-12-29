@@ -11,43 +11,43 @@ namespace ASCwebsite
 {
 
 
-    public partial class WebForm3
+    public partial class WebForm6
     {
 
         /// <summary>
-        /// LoginErorLabel control.
+        /// AddCartButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginErorLabel;
+        protected global::System.Web.UI.WebControls.Button AddCartButton;
 
         /// <summary>
-        /// TextEmail control.
+        /// BuyNowButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEmail;
+        protected global::System.Web.UI.WebControls.Button BuyNowButton;
 
         /// <summary>
-        /// TextPassword control.
+        /// productNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPassword;
+        protected global::System.Web.UI.WebControls.Label productNameLabel;
 
         /// <summary>
-        /// loginButton control.
+        /// productPriceLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginButton;
+        protected global::System.Web.UI.WebControls.Label productPriceLabel;
     }
 }

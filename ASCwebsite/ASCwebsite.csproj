@@ -2139,9 +2139,12 @@
     <Content Include="images\user-solid.svg" />
     <Content Include="Web.config" />
     <Content Include="homePage.aspx" />
-    <Content Include="productPage.aspx" />
     <Content Include="loginPage.aspx" />
     <Content Include="signupPage.aspx" />
+    <Content Include="CartPage.aspx" />
+    <Content Include="productDetailsPage.aspx" />
+    <Content Include="paymentGatewayPage.aspx" />
+    <Content Include="searchPage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2159,13 +2162,6 @@
     <Compile Include="homePage.aspx.designer.cs">
       <DependentUpon>homePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="productPage.aspx.cs">
-      <DependentUpon>productPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="productPage.aspx.designer.cs">
-      <DependentUpon>productPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="loginPage.aspx.cs">
       <DependentUpon>loginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2179,6 +2175,34 @@
     </Compile>
     <Compile Include="signupPage.aspx.designer.cs">
       <DependentUpon>signupPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartPage.aspx.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartPage.aspx.designer.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="productDetailsPage.aspx.cs">
+      <DependentUpon>productDetailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="productDetailsPage.aspx.designer.cs">
+      <DependentUpon>productDetailsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paymentGatewayPage.aspx.cs">
+      <DependentUpon>paymentGatewayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paymentGatewayPage.aspx.designer.cs">
+      <DependentUpon>paymentGatewayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchPage.aspx.cs">
+      <DependentUpon>searchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="searchPage.aspx.designer.cs">
+      <DependentUpon>searchPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

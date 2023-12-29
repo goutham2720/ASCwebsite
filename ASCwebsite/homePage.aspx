@@ -45,7 +45,7 @@
                 <div class="row row-cols-1 row-cols-sm-3  row-cols-md-5 my-3 mx-2   gap-3 px-3  text-justify">
                     <asp:Repeater ID="repeatProduct" runat="server">
                         <ItemTemplate>
-                            <a href="productPage.aspx?productId=<%# Eval("product_id") %>" style="text-decoration:none;">
+                            <a href="productDetailsPage.aspx?productId=<%# Eval("product_id") %>" style="text-decoration:none;">
 
                             <div class="card col shadow productCard"  >
                                 <img src="images/iphone-13-roze-frontandback_3_600x600_BGresize_16777215-tj.png" class="card-img-top" alt="..." />

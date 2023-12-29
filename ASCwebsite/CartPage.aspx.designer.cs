@@ -11,16 +11,16 @@ namespace ASCwebsite
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm5
     {
 
         /// <summary>
-        /// productDetails control.
+        /// repeatProduct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater productDetails;
+        protected global::System.Web.UI.WebControls.Repeater repeatProduct;
     }
 }

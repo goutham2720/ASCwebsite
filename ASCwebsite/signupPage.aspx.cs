@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Web;
@@ -12,23 +13,62 @@ namespace ASCwebsite
 {
     public partial class WebForm4 : System.Web.UI.Page
     {
-        SqlConnection con;
+        // SqlConnection con;
+       // SqlConnection con;
 
-        SqlCommand cmd;
+       // SqlCommand cmd;
 
         SqlDataAdapter ada;
+
+
         DataTable dt;
+
+        protected int CustomerIdGenerator(){
+            string constring = "data source=.;database=demoDb;integrated security=true;";
+            SqlConnection con = new SqlConnection(constring);
+            if (con.State == ConnectionState.Closed) { 
+            con.Open();
+            }
+            ada = new SqlDataAdapter("select max(user_id) from userTable ", con);
+
+            dt = new DataTable();
+
+            ada.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+
+
+
+                int code = Convert.ToInt32(dt.Rows[0][0].ToString()) + 1;
+
+                Response.Write("code:"+code);
+                return code;
+                
+               
+            }
+            else
+            {
+                return 100;
+            }
+            con.Close();
+           
+
+        }
+       
+
+        //SqlDataAdapter ada;
+      //  DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string constring = @"Data Source=DESKTOP-DJVB3P4;Initial Catalog=demoDb ;persist security info=False;integrated security=SSPI;";
+            //  string constring = @"Data Source=DESKTOP-DJVB3P4;Initial Catalog=demoDb ;persist security info=False;integrated security=SSPI;";
 
-            con = new SqlConnection();
+            // con = new SqlConnection();
 
-            con.ConnectionString = constring;
+            // con.ConnectionString = constring;
 
-            con.Open();
-
-            Response.Write("Connected");
+            //  con.Open();
+           
 
         }
         public void Clear()
@@ -46,6 +86,14 @@ namespace ASCwebsite
 
         protected void SignUpButton_Click(object sender, EventArgs e)
         {
+            string constring = "data source=.;database=demoDb;integrated security=true;";
+            SqlConnection con = new SqlConnection(constring);
+
+
+
+            con.Open();
+
+            Response.Write("Connected");
             try
             {
                 if (nameText.Text == "" || emailText.Text == "" || usernameText.Text == "" || contactText.Text==""|| passwordText.Text == "" || confirmpasswordText.Text == "" || confirmpasswordText.Text != passwordText.Text)
@@ -101,17 +149,27 @@ namespace ASCwebsite
                 }
                 else
                 {
+                    int UserId = CustomerIdGenerator();
+                    Response.Write(UserId);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+                    
+                  string signupdata = "INSERT INTO userTable (user_id,name,user_email,user_contact,user_name,user_password) values('"+ UserId + "','" + nameText.Text + "','" + emailText.Text + "','" + contactText.Text + "','"+ usernameText.Text + "','" + passwordText.Text + "')";
+                    SqlCommand cmd = new SqlCommand(signupdata, con);
+                    cmd.ExecuteNonQuery();
                    
-                   string s = "INSERT INTO userTable (name,user_email,user_contact,user_name,user_password) values('" + nameText.Text + "','" + emailText.Text + "','" + contactText.Text + "','"+ usernameText.Text + "','" + passwordText.Text + "')";
 
-
-
-
-
-                    cmd = new SqlCommand(s, con);
                     Response.Redirect("loginPage.aspx");
+                    // Response.Write(nameText.Text);
+                    //   Response.Write(emailText.Text);
+                    //  Response.Write(usernameText.Text);
+                    //  Response.Write(contactText.Text);
+                    //  Response.Write(passwordText.Text);
 
-                      cmd.ExecuteNonQuery();
+
+
 
                     con.Close();
                     Clear();
