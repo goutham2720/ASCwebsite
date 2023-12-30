@@ -15,31 +15,31 @@ namespace ASCwebsite
     {
 
         /// <summary>
-        /// Button1 control.
+        /// ElectronicsButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ElectronicsButton;
 
         /// <summary>
-        /// Button2 control.
+        /// GroceryButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button GroceryButton;
 
         /// <summary>
-        /// Button3 control.
+        /// AppliancesButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button AppliancesButton;
 
         /// <summary>
         /// repeatProduct control.

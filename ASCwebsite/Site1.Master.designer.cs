@@ -78,6 +78,15 @@ namespace ASCwebsite
         protected global::System.Web.UI.WebControls.Button CartButton;
 
         /// <summary>
+        /// OrderButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button OrderButton;
+
+        /// <summary>
         /// LogoutButton control.
         /// </summary>
         /// <remarks>

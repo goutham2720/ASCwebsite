@@ -78,7 +78,7 @@
                                 <asp:Button class="nav-link " ID="LoginSignupButton" runat="server" Text="Login/Signup" OnClick="LoginSignupButton_Click" />
                             </li>
                             <li class="nav-item">
-                               <asp:Button class="nav-link " ID="UserNameButton" runat="server" Text="Button" />
+                                <asp:Button class="nav-link " ID="UserNameButton" runat="server" Text="Button" />
                             </li>
                             <li class="nav-item  ">
 
@@ -92,14 +92,12 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li>
-                                            <button class="dropdown-item" type="button">Action</button></li>
-                                        <li>
-                                            <button class="dropdown-item" type="button">Another action</button></li>
-                                        <li>
-                                            <button class="dropdown-item" type="button">Something else here</button></li>
+                                            <asp:Button class="dropdown-item" ID="OrderButton" runat="server" Text="My order" OnClick="OrderButton_Click" />
+                                        </li>
                                         <li>
                                             <asp:Button class="dropdown-item" ID="LogoutButton" runat="server" Text="Logout" OnClick="LogoutButton_Click" />
                                         </li>
+                                        <li> <a class="dropdown-item" href="#">FAQ</a></li>
                                     </ul>
                                 </div>
 

@@ -159,8 +159,8 @@ namespace ASCwebsite
                   string signupdata = "INSERT INTO userTable (user_id,name,user_email,user_contact,user_name,user_password) values('"+ UserId + "','" + nameText.Text + "','" + emailText.Text + "','" + contactText.Text + "','"+ usernameText.Text + "','" + passwordText.Text + "')";
                     SqlCommand cmd = new SqlCommand(signupdata, con);
                     cmd.ExecuteNonQuery();
-                   
 
+                    Response.Write("<script>alert('Sign up successfully')</script>");
                     Response.Redirect("loginPage.aspx");
                     // Response.Write(nameText.Text);
                     //   Response.Write(emailText.Text);

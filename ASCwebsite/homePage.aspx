@@ -5,9 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content1body ">
         <div class="text-center my-3 row-cols-4">
-            <asp:Button ID="Button1" class="btn btn-primary col col-md-1" runat="server" Text="Button1" />
-            <asp:Button ID="Button2" class="btn btn-primary col  col-md-1" runat="server" Text="Button2" />
-            <asp:Button ID="Button3" class="btn btn-primary col  col-md-1" runat="server" Text="Button3" />
+            <asp:Button ID="ElectronicsButton" class="btn btn-primary col col-md-1" runat="server" Text="Electronics" OnClick="ElectronicsButton_Click" />
+            <asp:Button ID="GroceryButton" class="btn btn-primary col  col-md-1" runat="server" Text="Grocery" OnClick="GroceryButton_Click" />
+            <asp:Button ID="AppliancesButton" class="btn btn-primary col  col-md-1" runat="server" Text="Appliances" OnClick="AppliancesButton_Click" />
         </div>
         <div>
             <div id="carouselExampleIndicators" class="carousel slide">
@@ -57,7 +57,7 @@
                                          &#8377 <asp:Label ID="productPrice" runat="server" Text='<%# Eval("product_price") %>'></asp:Label>
                                     </h4>
                                 </div>
-                            </div>
+                            </div>  
                             </a>
                         </ItemTemplate>
                     </asp:Repeater>

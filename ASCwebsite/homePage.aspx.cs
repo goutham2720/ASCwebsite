@@ -38,5 +38,31 @@ namespace ASCwebsite
 
 
         }
+
+        protected void ElectronicsButton_Click(object sender, EventArgs e)
+        {   
+            Session["SearchCategory"] = "Electronics";
+            Session["searchText"] = "";
+            Response.Redirect("searchPage.aspx");
+            
+        }
+
+        protected void GroceryButton_Click(object sender, EventArgs e)
+        {
+           
+            Session["SearchCategory"] = "Grocery";
+            Session["searchText"] = "";
+           
+            Response.Redirect("searchPage.aspx");
+        }
+
+        protected void AppliancesButton_Click(object sender, EventArgs e)
+        {
+           
+            Session["SearchCategory"] = "Appliances";
+            Session["searchText"] = "";
+            Response.Redirect("searchPage.aspx");
+            
+        }
     }
 }

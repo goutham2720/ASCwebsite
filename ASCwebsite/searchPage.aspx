@@ -4,6 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid" style="min-height: 100vh;">
+        <center>
+        <asp:Label CssClass="py-3 " ID="SearchError" runat="server" Text=""></asp:Label>
+        </center>
         <div class="row row-cols-1 row-cols-sm-3  row-cols-md-5 my-3 mx-2   gap-3 px-3  text-justify">
             <asp:Repeater ID="repeatProduct" runat="server">
                 <ItemTemplate>

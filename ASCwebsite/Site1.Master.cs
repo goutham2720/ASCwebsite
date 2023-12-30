@@ -23,6 +23,7 @@ namespace ASCwebsite
                         UserNameButton.Visible = false;
                         LogoutButton.Visible = false;
                         CartButton.Visible = false;
+                        OrderButton.Visible = false;
                     }
                     else
                     {
@@ -31,6 +32,7 @@ namespace ASCwebsite
                         UserNameButton.Text = "Hello " + Session["LogInCustomerName"].ToString();
                         LogoutButton.Visible = true;
                         CartButton.Visible = true;
+                        OrderButton.Visible = true;
                     }
                 }
                 else
@@ -39,6 +41,7 @@ namespace ASCwebsite
                     UserNameButton.Visible = false;
                     LogoutButton.Visible = false;
                     CartButton.Visible = false;
+                    OrderButton.Visible = false;
                 }
             }
             catch(Exception ex)
@@ -61,6 +64,7 @@ namespace ASCwebsite
             UserNameButton.Visible = false;
             LogoutButton.Visible = false;
             CartButton.Visible = false;
+            OrderButton.Visible = false;
             Response.Redirect("homePage.aspx");
 
         }
@@ -83,6 +87,11 @@ namespace ASCwebsite
             }
              
             
+        }
+
+        protected void OrderButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("orderPage.aspx");
         }
     }
 }

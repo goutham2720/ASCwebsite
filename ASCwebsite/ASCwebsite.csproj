@@ -2145,6 +2145,7 @@
     <Content Include="productDetailsPage.aspx" />
     <Content Include="paymentGatewayPage.aspx" />
     <Content Include="searchPage.aspx" />
+    <Content Include="orderPage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2203,6 +2204,13 @@
     </Compile>
     <Compile Include="searchPage.aspx.designer.cs">
       <DependentUpon>searchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="orderPage.aspx.cs">
+      <DependentUpon>orderPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orderPage.aspx.designer.cs">
+      <DependentUpon>orderPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
